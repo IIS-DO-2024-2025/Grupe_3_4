@@ -26,6 +26,9 @@ public class UpdateLineCmd implements Command {
 		line.getEndPoint().setX(newState.getEndPoint().getX());
 		line.getEndPoint().setY(newState.getEndPoint().getY());
 		line.setColor(newState.getColor());
+		
+		// oldState = line.clone();
+		// line = newState.clone();
 	}
 
 	@Override
@@ -35,6 +38,8 @@ public class UpdateLineCmd implements Command {
 		line.getEndPoint().setX(oldState.getEndPoint().getX());
 		line.getEndPoint().setY(oldState.getEndPoint().getY());
 		line.setColor(oldState.getColor());
+		
+		// line = oldState.clone();
 	}
 
 }
